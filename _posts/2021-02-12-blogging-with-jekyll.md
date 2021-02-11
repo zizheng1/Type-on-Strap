@@ -32,7 +32,7 @@ brew install ruby
 sudo gem install jekyll
 ```
 
-然后在网站文件夹目录下输入`bundle install`后再输入`bundle exec jekyll serve`即可得到一个本地地址（我的地址是`http://127.0.0.1:4000/`），在浏览器中打开即可预览，此网站是在本地服务器上架设运行的。
+然后在网站文件夹目录下输入`bundle install`后再输入`bundle exec jekyll serve`即可得到一个本地地址（我的地址是`http://127.0.0.1:4000/`），在浏览器中打开即可预览，此网站是在本地服务器上架设运行的。（在修改`Gemfile`后还需要重新执行一次`bundle install`）
 
 不熟悉Jekyll的朋友可以前往Jekyll的官方网站查找所需要的信息以及不同平台的安装方法。
 
@@ -63,5 +63,9 @@ while (j < 20) {
 }
 {% endhighlight %}
 
+### GitHub.io
+创建一个名为`username.github.io`的仓库，将修改后的文件发布到`https://username.github.io`即可。
+
+
 ### 小结
-我们可以基本使用Jekyll + GitHub 来零成本搭建一个静态的个人博客网站了，但这同时还存在很多的限制，例如插件，非动态等。不过这可以是学习博客搭建的第一步，希望本站的资料可以帮助到各位。
+我们可以基本使用Jekyll + GitHub 来零成本搭建一个静态的个人博客网站了，但这同时还存在很多的限制，例如插件，非动态等。不过这可以是学习博客搭建的第一步，希望本站的资料可以帮助到各位。当然，GitHub Pages帮助我们照顾了整个网站的后台，如果你还想要一个美观的洁面的话，这便成为了一个浩大的工程，就与我们使用Jekyll的初衷想违背了。
