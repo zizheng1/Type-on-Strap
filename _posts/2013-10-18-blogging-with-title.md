@@ -1,7 +1,7 @@
 ---
 layout: post
 title: >
-    Blogging with title 
+    First Test: A Simple Blog 
 tags: [Test, Ipsum, Markdown, Portfolio]
 ---
 
