@@ -26,6 +26,12 @@ brew install ruby
 
 安装Jekyll
 
+```shell
+sudo gem install jekyll
+```
+
+然后在网站文件夹目录下输入`bundle install`后再输入`bundle exec jekyll serve`即可得到一个本地地址（我的地址是`http://127.0.0.1:4000/`），在浏览器中打开即可预览。
+
 
 
 
