@@ -37,6 +37,20 @@ sudo gem install jekyll
 不熟悉Jekyll的朋友可以前往Jekyll的官方网站查找所需要的信息以及不同平台的安装方法。
 
 
+### List
+This is an example of list:
+
+-Study
+    1. Math
+        - Algebra
+        - Topology
+    2. Chemistry
+    3. Physics
+        - Force
+-Work
+    1. Meetings
+        - Monday
+    2. Interview
 
 
 ### 数学表达式
