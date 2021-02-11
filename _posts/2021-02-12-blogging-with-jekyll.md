@@ -18,11 +18,13 @@ excerpt_separator: <!--more-->
 ### 在本地使用Jekyll
 为了方便调试以及修改，Jekyll提供了在本地浏览器中实时预览对功能，本教程主要以Catalina 10.15.6下的方法，其他系统下应该大同小异。
 
-Jekyll是由Ruby编写对，需要安装Ruby运行环境和RubyGem。Catalina默认安装了Ruby，输入 `Ruby -v` 查看Ruby版本。也可以手动安装一个最新版本。
+Jekyll是由Ruby编写，需要安装Ruby运行环境和RubyGem。Catalina默认安装了Ruby，输入 `Ruby -v` 查看Ruby版本。也可以手动安装一个最新版本。
 
 ```shell
 brew install ruby
 ```
+
+（有一些情况下还需要安装Command Line Tools, 具体方法是`xcode-select --install`）
 
 安装Jekyll
 
