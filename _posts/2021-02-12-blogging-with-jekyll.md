@@ -15,8 +15,14 @@ excerpt_separator: <!--more-->
 
 [Jekyll](https://jekyllrb.com/)可以理解为一个静态网页生成器，将Markdown编写的内容生成网页，日后不需要对结构排版等问题花费太多时间。
 
+### 在本地使用Jekyll
+为了方便调试以及修改，Jekyll提供了在本地浏览器中实时预览对功能，本教程主要以Catalina 10.15.6下的方法，其他系统下应该大同小异。
 
+Jekyll是由Ruby编写对，需要安装Ruby运行环境和RubyGem。Catalina默认安装了Ruby，输入 `Ruby -v` 查看Ruby版本。也可以手动安装一个最新版本。
 
+{% highlight %}
+brew install ruby
+{% endhighlight% }
 
 ### 数学表达式
 本站使用KaTeX显示数学表达式，例如$$E=mc^2$$
