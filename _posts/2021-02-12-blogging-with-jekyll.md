@@ -21,4 +21,9 @@ excerpt_separator: <!--more-->
 ### 数学表达式
 本站使用KaTeX显示数学表达式，例如$$E=mc^2$$
 
+在新的一行显示
+$$
+    x=\sqrt{-b\pm\sqrt{b^2-4ac}}{2a}
+$$
+
 
