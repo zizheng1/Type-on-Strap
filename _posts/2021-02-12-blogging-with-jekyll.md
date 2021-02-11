@@ -40,14 +40,14 @@ sudo gem install jekyll
 ### List
 This is an example of list:
 
--Study
+- Study
     1. Math
         - Algebra
         - Topology
     2. Chemistry
     3. Physics
         - Force
--Work
+- Work
     1. Meetings
         - Monday
     2. Interview
