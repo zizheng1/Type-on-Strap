@@ -22,7 +22,9 @@ Jekyll是由Ruby编写对，需要安装Ruby运行环境和RubyGem。Catalina默
 
 {% highlight %}
 brew install ruby
-{% endhighlight% }
+{% endhighlight %}
+
+
 
 ### 数学表达式
 本站使用KaTeX显示数学表达式，例如$$E=mc^2$$
