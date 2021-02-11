@@ -5,8 +5,8 @@ title: >
 tags: [Test, Ipsum, Markdown, Portfolio]
 ---
 
-# I am a BIG title
+# Test Blog
 
-This is a very tiny tiny post with less than 250 letters.
+This is the first test blog
 
 
