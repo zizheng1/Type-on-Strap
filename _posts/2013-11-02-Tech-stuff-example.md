@@ -7,7 +7,7 @@ tags: [Test, Markdown]
 ---
 
 
-Because if you put some code in your blog, you would at least make it:
+Because if you put some code in your blog, you would at least make it: Test
 
 1. Searchable
 2. Good looking
