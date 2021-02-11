@@ -20,9 +20,12 @@ excerpt_separator: <!--more-->
 
 Jekyll是由Ruby编写对，需要安装Ruby运行环境和RubyGem。Catalina默认安装了Ruby，输入 `Ruby -v` 查看Ruby版本。也可以手动安装一个最新版本。
 
-{% highlight %}
+```shell
 brew install ruby
-{% endhighlight %}
+```
+
+安装Jekyll
+
 
 
 
