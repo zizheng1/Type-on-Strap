@@ -52,15 +52,21 @@ RS232是用美国电子工业联盟制定的串行数据通讯的物理接口标
 >               ---------                              ---------
 
 | 脚位 | 简写  | 意义 | 说明 |
-| ---- | ---- | ---- | ---- |
-| Pin 1 |   |   |   |
-| Pin 2 |   |   |   |
-| Pin 3 |   |   |   |
-| Pin 4 |   |   |   |
-| Pin 5 |   |   |   |
-| Pin 6 |   |   |   |
-| Pin 7 |   |   |   |
-| Pin 8 |   |   |   |
-| Pin 9 |   |   |   |
-Reference: [工业控制系统安全之——Modbus学习笔记](https://www.freebuf.com/articles/ics-articles/148637.html)
+| ----  | ----| ----                |  ---- |
+| Pin 1 | DCD | Data Carrier Detect | 调制解调器通知电脑有载波被侦察到 |
+| Pin 2 | RXD | Receiver            | 接收资料                     |
+| Pin 3 | TXD | Transmit            | 发送资料                     |
+| Pin 4 | DTR | Data Terminal Ready | 电脑告诉调制解调器可以进行传输  |
+| Pin 5 | GND | Ground              | 地线                        |
+| Pin 6 | DRS | Data Set Ready      | 调制解调器告诉电脑一切准备就绪  | 
+| Pin 7 | RTS | Request To Send     | 电脑要求调制解调器将资料提交     |
+| Pin 8 | CTS | Clear To Read       | 调制解调器通知电脑可以传输资料   |
+| Pin 9 | RI  | Ring Indicator      | 调制解调器通知电脑有电话进来     |
+
+
+
+
+Reference: 
+[工业控制系统安全之——Modbus学习笔记](https://www.freebuf.com/articles/ics-articles/148637.html)
+[RS-232](https://zh.wikipedia.org/wiki/RS-232)
 
