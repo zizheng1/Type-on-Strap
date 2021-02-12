@@ -1,13 +1,13 @@
 # Icons on the footer
 rss: true
-email_address:    # Full email address, e.g. "sam@example.com"
+email_address: zizheng19960810@gmail.com   # Full email address, e.g. "sam@example.com"
 behance:
 bitbucket:
 dribbble:
-facebook:
+facebook: Zizheng Yan
 flickr:
 gitlab:
-github: "sylhare"
+github: "zizheng1"
 instagram:
 keybase:
 linkedin:         # Full URL
@@ -16,7 +16,7 @@ reddit:
 soundcloud:
 stack_overflow:
 stack_exchange:   # Full URL
-steam:
+steam: 
 tumblr:
 twitter:          # "twitter username"
 vimeo:
@@ -35,6 +35,7 @@ share:
   pinterest:
   pocket:
   reddit: true
-  linkedin:
+  linkedin: true
   wordpress:
   email: true
+  wechat: true
