@@ -5,7 +5,7 @@ tags: [Blog, Jekyll]
 excerpt_separator: <!--more-->
 ---
 
-把我搭建这个个人博客的过程作为本博客的第一篇教程
+把我搭建这个个人博客的过程作为本博客的第一篇正式文章
 
 <!--more-->
 
