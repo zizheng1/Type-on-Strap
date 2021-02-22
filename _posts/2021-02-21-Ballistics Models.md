@@ -29,11 +29,13 @@ If we want to keep the same energy, we can work out the change in mass for a kno
 $$
 	\Delta m  =(\Delta s)^2
 $$
+
 For gravity, if we are using a higher gravity coefficient in the game, it will make the ballistic trajectory far too severe: well-aimed projectiles will hit the ground only a few meters in front of the character. To avoid this, we lower the gravity. For a known change in speed, we can work out a “realistic” gravity value using the formula,
 
 $$
 	g_{\text{bullet}}=\frac{1}{\Delta s}g_{\text{normal}}
 $$
+
 where $$
 g_{\text{normal}}
 $$
