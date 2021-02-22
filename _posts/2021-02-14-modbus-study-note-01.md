@@ -69,5 +69,6 @@ RS232是用美国电子工业联盟制定的串行数据通讯的物理接口标
 Reference: 
 
 [工业控制系统安全之——Modbus学习笔记](https://www.freebuf.com/articles/ics-articles/148637.html)
+
 [RS-232](https://zh.wikipedia.org/wiki/RS-232)
 
