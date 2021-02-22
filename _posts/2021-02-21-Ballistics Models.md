@@ -32,13 +32,16 @@ For gravity, if we are using a higher gravity coefficient in the game, it will m
 $$
 g_{\text{bullet}}=\frac{1}{\Delta s}g_{\text{normal}}
 $$
-where $g_{\text{normal}}$ is the gravity you'd expect of the particle was traveling at full speed.
+where $$
+g_{\text{normal}}
+$$
+is the gravity you'd expect of the particle was traveling at full speed.
 
 ## Implementation
 
 Let's design a program that gives you the choice of four weapons: a pistol, an artillery piece, a fireball, and a laser gun. When you click the mouse, a new round is fired. The code that creates a new round and fires it looks like this:
 
-```C++
+```c++
 // Set the properties of the particle.
 switch(currentShotType)
 {
