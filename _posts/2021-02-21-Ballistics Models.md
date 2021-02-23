@@ -111,4 +111,4 @@ It simply calls the integrator on each particle in turn. After it has updated th
 
 Here is a simple demo.
 
-{% include aligner.html images="assets/Ballistic-Model.gif" %}
+{% include aligner.html images="assets/img/Ballistic-Model.gif" %}
