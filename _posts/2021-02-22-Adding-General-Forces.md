@@ -215,3 +215,46 @@ $$
 
 where $$k_1$$ and $$k_2$$ are two constants that characterize how strong the drag force is - they are usually called the "drag coefficients" and they depend on both the object and the type of drag behind simulated. $$\hat{\dot{\bf{p}}}$$ is the normalized velocity of the particle. The implementation for the drag generator looks like this:
 
+```c++
+/**
+* A force generator that applies a drag force. One instance
+* can be used for multiple particles.
+*/
+class ParticleDrag : public ParticleForceGenerator
+{
+	/** Holds the velocity drag coefficient. */
+	real k1;
+	/** Holds the velocity squared drag coefficient. */
+	real k2;
+public:
+	/** Creates the generator with the given coefficients. */
+	ParticleDrag(real k1, real k2);
+	/** Applies the drag force to the given particle. */
+	virtual void updateForce(Particle *particle, real duration);
+};
+```
+
+```c++
+void ParticleDrag::updateForce(Particle* particle, real duration)
+{
+	Vector3 force;
+	particle->getVelocity(&force);
+	// Calculate the total drag coefficient.
+	real dragCoeff = force.magnitude();
+	dragCoeff = k1 * dragCoeff + k2 * dragCoeff * dragCoeff;
+	// Calculate the final force and apply it.
+	force.normalize();
+	force *= -dragCoeff;
+	particle->addForce(force);
+}
+```
+
+Once again the force is calculated based only on the properties of the object it is passed. The only pieces of data stored by the class are the values for the two constants. As before, one instance of this class could be shared among any number of objects that have the same drag coefficients.
+
+### Built-In Gravity And Damping
+
+Using the generators above we can replace both the damping and the acceleration due to gravity with force generators. This is a valid approach and one used by many different engines. It allows us to remove the special code that processes damping, and it means that we don't need to store an acceleration due to gravity with the object. It can be calculated among all the other forces during transient force accumulation.
+
+### Summary
+
+Drag and gravity are important force generators, but they only replicate functionality we had in our particle physics engine. To move toward a mass aggregate physics engine, we need to start linking particles together. Chapter 6 introduces springs and other spring-like connections, using the force generator structure we’ve built in this chapter.
