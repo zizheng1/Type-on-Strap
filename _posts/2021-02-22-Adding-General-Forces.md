@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fireworks
+title: Adding General Forces
 tags: [Visualization, Physics Engine, Drag Force, Gravity]
 excerpt_separator: <!--more-->
 ---
