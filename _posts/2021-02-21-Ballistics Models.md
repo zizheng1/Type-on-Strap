@@ -109,4 +109,6 @@ for (AmmoRound *shot = ammo; shot < ammo+ammoRounds; shot++)
 
 It simply calls the integrator on each particle in turn. After it has updated the particle, it checks whether the particle is below zero height, in which case it is removed. The particle will also be removed if it is a long way from the firing point (100 m), or if it has been in flight for more than 5 s. In a real game you would use some kind of collision detection system to check if the projectile had collided with anything. Additional game logic could then be used to reduce the hit points of the target character, or add a bullet-hole graphic to a surface.
 
-(I will upload a gif demo later.)
+Here is a simple demo.
+
+{% include aligner.html images="assets/Ballistic-Model.gif" %}
