@@ -27,10 +27,12 @@ $$
 \end{array}\end{split}
 $$
 
+
 $$
 \begin{split}\begin{array} {crrrr} \text{Model -} & A & C & G & T\\ A & 0.300 & 0.205 & 0.285 & 0.210\\ C & 0.322 & 0.298 & 0.078 & 0.302 \\ G & 0.248 & 0.246 & 0.298 & 0.208\\ T & 0.177 & 0.239 & 0.292 & 0.292 \\ \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
 \end{array}\end{split}
 $$
+
 
 Then calculate the Log-Odds ration for a sequence $x$:
 
