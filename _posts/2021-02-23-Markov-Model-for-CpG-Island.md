@@ -64,7 +64,7 @@ $$
 So we can calculate the table, rather than recompute each $$\beta$$ every time:
 
 $$
-\\begin{matrix}  
+\begin{matrix}  
 \beta & A & C & G & T\\ 
 A & -0.740 & 0.419 & .580 & -0.803\\ 
 C & -0.913 & 0.302 & 1.812 & -0.685 \\ 
