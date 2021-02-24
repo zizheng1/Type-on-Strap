@@ -9,8 +9,8 @@ excerpt_separator: <!--more-->
 
 
 > This is the summary of Chapter 6 of Georg Hager and Gerhard Wellein's Introduction to High Performance Computing for Scientists and Engineers. This site is for EDUCATIONAL PURPOSES ONLY.
->
-> ### Parallel Execution
+
+### Parallel Execution
 
 OpenMP is a layer that adapts the raw OS thread interface to make it more usable with the typical structures that numerical software tends to employ. In practice, parallel regions in Fortran are initiated by `!OMP PARALLEL` and ended by `!OMP END PARALLEL` directives, respectively. The `!OMP` string is a so-called `sentinel`, which starts an OpenMP directive (in C/C++, `#pragma omp` is used instead). Inside a parallel region, each thread carries a unique identifier, its `thread ID`, which runs from zero to the number of threads minus one, and can be obtained by the `omp_get_thread_num()` API function:
 
