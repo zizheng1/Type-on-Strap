@@ -24,16 +24,14 @@ $$
 
 
 $$
-    \begin{split}
-    \begin{array} {crrrr} 
+    \begin{matrix} 
     \text{Model +} & A & C & G & T\\ 
     A & 0.180 & 0.274 & 0.426 & 0.120\\
     C & 0.171 & 0.368 & 0.274 & 0.188 \\
     G & 0.161 & 0.339 & 0.375 & 0.125\\ 
     T & 0.079 & 0.355 & 0.384 & 0.182 \\ 
     \text{station} & 0.155 & 0.341 & 0.350 & 0.154\\
-    \end{array}
-    \end{split}
+    \end{matrix}
 $$
 
 Also
@@ -54,7 +52,7 @@ $$
 Then calculate the Log-Odds ration for a sequence $$x$$:
 
 $$
-S(x)=log_2 \frac{[P(x|model+)]}{[P(x|model-)]} = \sum_{i=1}^L log_2 \frac{a^+_{x(i-1)x(i)}}{ a^-_{x(i-1)x(i)}} = = \sum_{i=1}^L log_2 \beta_{x(i-1)x(i)} +log_2 \frac{[P(x_1\mid model+)]}{[P(x_1\mid model-)]}
+    S(x)=log_2 \frac{[P(x|model+)]}{[P(x|model-)]} = \sum_{i=1}^L log_2 \frac{a^+_{x(i-1)x(i)}}{ a^-_{x(i-1)x(i)}} = = \sum_{i=1}^L log_2 \beta_{x(i-1)x(i)} +log_2 \frac{[P(x_1\mid model+)]}{[P(x_1\mid model-)]}
 $$
 
 Scores $$S(x)$$ allows discrimination of a model $$+$$ against another $$-$$
