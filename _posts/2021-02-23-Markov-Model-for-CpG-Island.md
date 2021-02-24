@@ -37,16 +37,14 @@ $$
 Also
 
 $$
-    \begin{split}
-    \begin{array} {crrrr} 
+    \begin{matrix} 
     \text{Model -} & A & C & G & T\\ 
     A & 0.300 & 0.205 & 0.285 & 0.210\\ 
     C & 0.322 & 0.298 & 0.078 & 0.302 \\ 
     G & 0.248 & 0.246 & 0.298 & 0.208\\ 
     T & 0.177 & 0.239 & 0.292 & 0.292 \\ 
     \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
-    \end{array}
-    \end{split}
+    \end{matrix} 
 $$
 
 Then calculate the Log-Odds ration for a sequence $$x$$:
@@ -66,7 +64,13 @@ $$
 So we can calculate the table, rather than recompute each $$\beta$$ every time:
 
 $$
-\begin{split}\begin{array} {crrrr} \beta & A & C & G & T\\ A & -0.740 & 0.419 & .580 & -0.803\\ C & -0.913 & 0.302 & 1.812 & -0.685 \\ G & -0.623 & 0.461 & 0.331 & -0.730\\ T & -1.169 & 0.573 & 0.393 & -0.679 \\ \end{array}\end{split}
+\\begin{matrix}  
+\beta & A & C & G & T\\ 
+A & -0.740 & 0.419 & .580 & -0.803\\ 
+C & -0.913 & 0.302 & 1.812 & -0.685 \\ 
+G & -0.623 & 0.461 & 0.331 & -0.730\\ 
+T & -1.169 & 0.573 & 0.393 & -0.679 \\ 
+\end{matrix} 
 $$
 
 For example, the sequence $$x = \{CACTAAGCTA\}$$ would have a score: $$-0.913+0.419+1.812-1.169-0.740+0.580+0.461-0.685-1.169-0.757=-1.404$$ normalized by length: $$-2.161/9=-0.2401$$. The score is negative indicating that this is not a CpG Island. 
