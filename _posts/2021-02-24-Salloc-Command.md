@@ -24,7 +24,7 @@ Parallel run options:
 |      | `--cpu-freq=min[-max[:gov]]`     | requested cpu frequency (and governor)                       |
 |      | `--delay-boot=mins`              | delay boot for desired node features                         |
 | -d   | `--dependency=type:jobid[:time]` | defer job until condition on jobid is satisfied              |
-|      | `--deadline=time`                | remove the job if no ending possible before this deadline (start > (deadline - time[-min]))|
+|      | `--deadline=time`                | remove the job if no ending possible before this deadline <br>(start > (deadline - time[-min]))|
 |      |                                  |                                                              |
 |      |                                  |                                                              |
 |      |                                  |                                                              |
