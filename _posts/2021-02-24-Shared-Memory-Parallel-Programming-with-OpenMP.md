@@ -163,3 +163,66 @@ If, at a certain point in the parallel execution, it is necessary to synchronize
 ```
 
 The barrier is a *synchronization point*, which guarantees that all threads have reached it before any thread goes on executing the code below it. Certainly it must be ensured that every thread hits the barrier, or a deadlock may occur.
+
+### Reductions
+
+There is a set of supported operators for OpenMP reductions (slightly different for Fortran and C/C++), which cannot be extended. C++ overloaded operators are not allowed. However, the most common cases (addition, subtraction, multiplication, logical, etc.) are covered. 
+
+```fortran
+	double precision :: r,s
+	double precision, dimension(N) :: a
+
+	call RANDOM_SEED()
+!$OMP PARALLEL DO PRIVATE(r) REDUCTION(+:s)
+	do i=1,N
+		call RANDOM_NUMBER(r) ! thread safe
+		a(i) = a(i) + func(r) ! func() is thread safe
+		s = s + a(i) * a(i)
+	enddo
+!$OMP END PARALLEL DO
+
+	print *,’Sum = ’,s
+```
+
+### Loop Scheduling
+
+As mentioned earlier, the mapping of loop iterations to threads is configurable. It can be controlled by the argument of a SCHEDULE clause to the loop worksharing directive:
+
+```fortran
+!$OMP DO SCHEDULE(STATIC)
+	do i=1,N
+		a(i) = calculate(i)
+	enddo
+!$OMP END DO
+```
+
+The simplest possibility is `STATIC`, which divides the loop into contiguous chunks of (roughly) equal size. Each thread then executes on exactly one chunk. If for some reason the amount of work per loop iteration is not constant but, e.g., decreases with loop index, this strategy is suboptimal because different threads will get vastly different workloads, which leads to load imbalance. One solution would be to use a *chunksize* like in “`STATIC,1`,” dictating that chunks of size 1 should be distributed across threads in a round-robin manner. The *chunksize* may not only be a constant but any valid integer-valued expression.
+
+### Tasking
+
+OpenMP 3.0 provides the *task* concept to circumvent this limitation. A task is defined by the `TASK` directive, and contains code to be executed.1 When a thread encounters a task construct, it may execute it right away or set up the appropriate data environment and defer its execution. The task is then ready to be executed later by any thread of the team.
+
+As a simple example, consider a loop in which some function must be called for each loop index with some probability:
+
+```fortran
+	integer i,N=1000000
+	type(object), dimension(N) :: p
+	double precision :: r
+	...
+!$OMP PARALLEL PRIVATE(r,i)
+!$OMP SINGLE
+	do i=1,N
+		call RANDOM_NUMBER(r)
+		if(p(i)%weight > r) then
+!$OMP TASK
+! i is automatically firstprivate
+! p() is shared
+			call do_work_with(p(i))
+!$OMP END TASK
+		endif
+	enddo
+!$OMP END SINGLE
+!$OMP END PARALLEL
+```
+
+The actual number of calls to `do_work_with()` is unknown, so tasking is a natural choice here. A `do` loop over all elements of `p()` is executed in a `SINGLE` region (lines 6–17). A `SINGLE` region will be entered by one thread only, namely the one that reaches the `SINGLE` directive first.
