@@ -24,15 +24,15 @@ $$
 
 
 $$
-\begin{split}\begin{array} {crrrr} \text{Model +} & A & C & G & T\\ A & 0.180 & 0.274 & 0.426 & 0.120\\ C & 0.171 & 0.368 & 0.274 & 0.188 \\ G & 0.161 & 0.339 & 0.375 & 0.125\\ T & 0.079 & 0.355 & 0.384 & 0.182 \\ \text{station} & 0.155 & 0.341 & 0.350 & 0.154\\
-\end{array}\end{split}
+    \begin{split}\begin{array} {crrrr} \text{Model +} & A & C & G & T\\ A & 0.180 & 0.274 & 0.426 & 0.120\\ C & 0.171 & 0.368 & 0.274 & 0.188 \\ G & 0.161 & 0.339 & 0.375 & 0.125\\ T & 0.079 & 0.355 & 0.384 & 0.182 \\ \text{station} & 0.155 & 0.341 & 0.350 & 0.154\\
+    \end{array}\end{split}
 $$
 
 Also
 
 $$
-\begin{split}\begin{array} {crrrr} \text{Model -} & A & C & G & T\\ A & 0.300 & 0.205 & 0.285 & 0.210\\ C & 0.322 & 0.298 & 0.078 & 0.302 \\ G & 0.248 & 0.246 & 0.298 & 0.208\\ T & 0.177 & 0.239 & 0.292 & 0.292 \\ \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
-\end{array}\end{split}
+    \begin{split}\begin{array} {crrrr} \text{Model -} & A & C & G & T\\ A & 0.300 & 0.205 & 0.285 & 0.210\\ C & 0.322 & 0.298 & 0.078 & 0.302 \\ G & 0.248 & 0.246 & 0.298 & 0.208\\ T & 0.177 & 0.239 & 0.292 & 0.292 \\ \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
+    \end{array}\end{split}
 $$
 
 Then calculate the Log-Odds ration for a sequence $$x$$:
@@ -49,7 +49,7 @@ $$
 log_2 \beta_{AC}=log_2 \frac{a^+_{AC}}{ a^-_{AC}}=log_2 \frac{274}{205}=0.41855
 $$
 
-So we can calculate the table, rather than recompute each $\beta$ every time:
+So we can calculate the table, rather than recompute each $$\beta$$ every time:
 
 $$
 \begin{split}\begin{array} {crrrr} \beta & A & C & G & T\\ A & -0.740 & 0.419 & .580 & -0.803\\ C & -0.913 & 0.302 & 1.812 & -0.685 \\ G & -0.623 & 0.461 & 0.331 & -0.730\\ T & -1.169 & 0.573 & 0.393 & -0.679 \\ \end{array}\end{split}
