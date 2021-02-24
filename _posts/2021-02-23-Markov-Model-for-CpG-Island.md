@@ -24,15 +24,31 @@ $$
 
 
 $$
-    \begin{split}\begin{array} {crrrr} \text{Model +} & A & C & G & T\\ A & 0.180 & 0.274 & 0.426 & 0.120\\ C & 0.171 & 0.368 & 0.274 & 0.188 \\ G & 0.161 & 0.339 & 0.375 & 0.125\\ T & 0.079 & 0.355 & 0.384 & 0.182 \\ \text{station} & 0.155 & 0.341 & 0.350 & 0.154\\
-    \end{array}\end{split}
+    \begin{split}
+    \begin{array} {crrrr} 
+    \text{Model +} & A & C & G & T\\ 
+    A & 0.180 & 0.274 & 0.426 & 0.120\\
+    C & 0.171 & 0.368 & 0.274 & 0.188 \\
+    G & 0.161 & 0.339 & 0.375 & 0.125\\ 
+    T & 0.079 & 0.355 & 0.384 & 0.182 \\ 
+    \text{station} & 0.155 & 0.341 & 0.350 & 0.154\\
+    \end{array}
+    \end{split}
 $$
 
 Also
 
 $$
-    \begin{split}\begin{array} {crrrr} \text{Model -} & A & C & G & T\\ A & 0.300 & 0.205 & 0.285 & 0.210\\ C & 0.322 & 0.298 & 0.078 & 0.302 \\ G & 0.248 & 0.246 & 0.298 & 0.208\\ T & 0.177 & 0.239 & 0.292 & 0.292 \\ \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
-    \end{array}\end{split}
+    \begin{split}
+    \begin{array} {crrrr} 
+    \text{Model -} & A & C & G & T\\ 
+    A & 0.300 & 0.205 & 0.285 & 0.210\\ 
+    C & 0.322 & 0.298 & 0.078 & 0.302 \\ 
+    G & 0.248 & 0.246 & 0.298 & 0.208\\ 
+    T & 0.177 & 0.239 & 0.292 & 0.292 \\ 
+    \text{station} & 0.0.262 & 0.246 & 0.239 & 0.253\\
+    \end{array}
+    \end{split}
 $$
 
 Then calculate the Log-Odds ration for a sequence $$x$$:
