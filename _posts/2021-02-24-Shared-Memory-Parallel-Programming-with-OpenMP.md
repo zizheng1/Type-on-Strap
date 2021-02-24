@@ -5,6 +5,9 @@ tags: [OpenMP]
 excerpt_separator: <!--more-->
 ---
 
+<!--more-->
+
+
 > This is the summary of Chapter 6 of Georg Hager and Gerhard Wellein's Introduction to High Performance Computing for Scientists and Engineers. This site is for EDUCATIONAL PURPOSES ONLY.
 >
 > ### Parallel Execution
